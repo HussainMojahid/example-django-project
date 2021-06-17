@@ -1,0 +1,12 @@
+{%extends 'AppTwo/base.html'%}
+{% block content_n %}
+<h1>Welcome to login page</h1>
+<form action="{%url 'AppTwo:user_login'%}" method="POST">
+{% csrf_token %}
+<label for="username">username</label>
+<input type="text" name="username">
+<label for="password">password</label>
+<input type="password"name='password'>
+<input type="submit" value="Login">
+</form>
+{% endblock content_n %}

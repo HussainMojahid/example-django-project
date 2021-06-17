@@ -1,0 +1,18 @@
+{%extends 'AppTwo/base.html'%}
+
+{%block content_n%}
+<h1>Velcome to data collection Form</h1>
+<form method="POST">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" value="submit">
+</form>
+{% now "jS F Y H:i" %}
+{% autoescape on %}
+    {%lorem  w random%}
+{% endautoescape %}
+{% comment "Optional note" %}
+    <p>Commented out text with {{ create_date|date:"c" }}</p>
+{% endcomment %}
+
+{%endblock%}

@@ -1,0 +1,19 @@
+{%extends "AppTwo/base.html"%}
+
+{%block content_n%}
+
+
+
+<ol>
+    {%for e in mod %}
+    <li>user info</li>
+    <ul>
+        <li>{{e.fname}}</li>
+        <li>{{e.lname}}</li>
+        <li>{{e.email}}</li>
+    </ul>
+    {%endfor%}
+</ol>
+    
+
+{%endblock%}
